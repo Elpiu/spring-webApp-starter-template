@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h1 style="background: #92e3a9;padding: 6px;margin: 14px;" th:text="${appName}"></h1>
+                <p th:text="${appDes}"></p>
+                <img class="w-100" src="/img/Team%20spirit-bro.png">
+            </div>
+            <div class="col-md-6">
+                <section class="login-clean" style="background-color: transparent;font-family: Poppins, sans-serif;">
+                    <form method="post" style="margin-top: 40px;" action="login.html">
+                        <h2 class="visually-hidden">Login Form</h2>
+                        <div class="illustration"><i class="icon ion-log-in" style="color: #00b5a8;"></i>
+                            </div><a th:href="@{/register}" class="forgot" >Non hai un account? Iscriviti qui!<br></a>
+                        <div class="form-group mb-3"><input class="form-control" type="email" name="email" placeholder="Username"></div>
+                        <div class="form-group mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                        <div class="form-group mb-3"><button class="btn btn-primary d-block bounce animated w-100" type="submit" style="background: #92e3a9;">Login</button></div><a class="forgot" href="#">Dimenticato la tua mail o password?<br></a>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div lang="en" th:replace="fragments/footer :: footer"> </div>
+</body>
+</html>
+
+
+
+
