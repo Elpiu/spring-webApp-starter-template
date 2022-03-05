@@ -10,10 +10,11 @@ public interface Regexp {
     public static final String REG_NAME_SURNAME = "^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$";
     public static final String REG_NAME_SURNAME_MESSAGE = "Non può contenere numeri o caratteri speciali";
 
+    //Password valida : pass123456.$A
     public static final String REG_PASSWORD = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#$%'-\\/=^\\_`~+&])(?=.*[^0-9a-zA-Z]).{8,16}$";
     public static final String REG_PASSWORD_MESSAGE = "La password non è valida";
 
-
+    //Userame valido : ciaoasd.j
     public static final String REG_USERNAME = "^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$";
     public static final String REG_USERNAME_MESSAGE = "Username non valido";
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<!-- INSERT HERE #QUI-->
+<div>
+    <h1> MY CONTENT GO HERE</h1>
+    <p th:text="${session.user['username']}"></p>
+    <p th:text="${session.user['id']}"></p>
+    <p th:text="${session.user['password']}"></p>
+    <p th:text="${session.user['bio']}"></p>
+    <p th:text="${session.user['email']}"></p>
+    <p th:text="${session.user['role']}"></p>
+    <a th:href="@{/goLogout}" class="btn btn-primary "> Effettua Logout</a>
+</div>
+
+
+
+<div lang="en" th:replace="fragments/footer :: footer"> </div>
+</body>
+</html>

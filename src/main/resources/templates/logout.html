@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+
+
+<!-- INSERT HERE #QUI-->
+<div class="container" style="background: #2f4858;text-align: center;font-size: 42px;background-size: cover, auto;margin-top: 26px;margin-bottom: 26px;">
+    <h1 style="font-size: 60px;margin-top: 10;color: #ffffff;">Logout effettuato con successo!</h1>
+    <p style="color: rgb(255,255,255);">Per tornare alla Home</p>
+    <a th:href="@{/}" class="btn btn-primary" type="button" style="font-size: 30px;margin-bottom: 16px;background: #92e3a9;width: 167.5174px;">
+        <i class="fa fa-home" style="font-size: 66px;"></i></a>
+</div>
+
+
+<div lang="en" th:replace="fragments/footer :: footer"> </div>
+</body>
+</html>

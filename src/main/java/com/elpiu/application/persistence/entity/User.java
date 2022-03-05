@@ -30,19 +30,16 @@ public class User implements Serializable {
     @Positive(message = "Id deve essere positivo")
     private Integer id;
 
-    @Length(min = 8, max = 20)
     @Column(name = "username", nullable = false, unique = true)
-    @Pattern(regexp = REG_USERNAME, message = REG_USERNAME_MESSAGE)
+    //@Pattern(regexp = REG_USERNAME, message = REG_USERNAME_MESSAGE)
     private String username;
 
-    @Length(min = 8, max = 20)
-    @Column(name = "surname", nullable = false, unique = true)
-    @Pattern(regexp = REG_NAME_SURNAME, message = REG_NAME_SURNAME_MESSAGE)
+    @Column(name = "surname", unique = true)
+    //@Pattern(regexp = REG_NAME_SURNAME, message = REG_NAME_SURNAME_MESSAGE)
     private String surname;
 
-    @Length(min = 8, max = 20)
-    @Column(name = "name", nullable = false, unique = true)
-    @Pattern(regexp = REG_NAME_SURNAME, message = REG_NAME_SURNAME_MESSAGE)
+    @Column(name = "name", unique = true)
+    //@Pattern(regexp = REG_NAME_SURNAME, message = REG_NAME_SURNAME_MESSAGE)
     private String name;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -50,7 +47,6 @@ public class User implements Serializable {
     @CreatedDate
     private Date joinedDate = new Date();
 
-    @Length(min = 8, max = 20, message = "La password deve essere lunga almeno 8 caratteri")
     @Column(name = "password")
     //@Pattern(regexp = REG_PASSWORD, message = REG_USERNAME_MESSAGE)
     private String password;
