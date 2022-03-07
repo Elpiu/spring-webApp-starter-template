@@ -10,3 +10,12 @@ Spring validation per i form e patterns
 Pagina di erroe e sicurezza dei path
 
 Utilizzo di Entity e Repository
+
+
+![](ImageProject/projetStructure.png)
+
+![](ImageProject/img.png)
+![](ImageProject/img_1.png)
+![](ImageProject/img_2.png)
+![](ImageProject/img_3.png)
+![](ImageProject/img_4.png)
