@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"></head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div style="font-size: 18px;background: #92e3a9;">
+    <div style="text-align: center;">
+        <div class="container">
+            <h1 style="background: #92e3a9;">WebApp Name</h1>
+            <h1 style="background: #92e3a9;font-size: 23.8833px;">Registration</h1>
+            <section class="register-photo" style="width: 900;background: rgba(146,195,160,0.33);">
+                <div class="form-container">
+                    <form method="post" action="#" th:action="@{/register}" th:object="${registrationForm}">
+                        <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                        <div class="mb-3"><input class="form-control" th:field="*{email}" type="email" name="email" placeholder="Email">
+                            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error text-center text-danger"></p>
+                            <p th:if="${EmailError}" th:text="${EmailError}" class="error text-center text-danger"></p>
+
+                        </div>
+                        <div class="mb-3"><input class="form-control" th:field="*{username}" type="text" name="username" placeholder="Username">
+                            <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error text-center text-danger"></p>
+                            <p th:if="${UsernameError}" th:text="${UsernameError}" class="error text-center text-danger"></p>
+
+                        </div>
+                        <div class="mb-3"><input class="form-control" th:field="*{password}" type="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="mb-3"><input class="form-control" th:field="*{passwordConfirm}" type="password" name="password-repeat" placeholder="Password (repeat)">
+                            <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error text-center text-danger"></p>
+                            <p th:if="${PasswordError}"  th:text="${PasswordError}" class="error text-center text-danger"></p>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check"><label class="form-check-label">
+                                <input class="form-check-input" th:field="*{checkedLicense}" type="checkbox">I agree to the license terms.</label>
+                                <p th:if="${#fields.hasErrors('checkedLicense')}"  th:errors="*{checkedLicense}" class="error text-center text-danger"></p>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Sign Up</button></div>
+                            <a th:href="@{/}" class="already" >You already have an account? Login here.</a>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<div lang="en" th:replace="fragments/footer :: footer"> </div>
+</body>
+
+
+</html>

@@ -34,3 +34,4 @@ build/
 src/main/resources/noGit/application.properties
 src/main/resources/noGit/application.properties
 src/main/resources/noGit/application.properties
+src/main/resources/application.properties
